@@ -1,0 +1,646 @@
+#page {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background-color: $color-3;
+  height: 100%;
+}
+
+/* ========================
+Basic type treatment 
+========================= */
+h1 {margin: 0 0 1em 0;}
+h2 {
+  margin: 0 0 0.5em 0;
+  line-height: 1.1em;
+}
+
+h3 {margin: 0 0 0.5em 0;}
+h4 {margin: 0 0 1.5em 0;}
+
+p {margin: 0 0 1em 0;}
+
+a {
+  color: $color-1;
+  &:visited {
+    color: lighten($color-1, 10%);
+  }
+}
+
+a.btn {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: $color-3;
+  border: 1px solid $color-3;
+  padding: 4px 15px;
+  transition: background-color .5s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ========================
+Header Logo 
+========================= */
+header {
+  height: 430px;
+  background: $color-2 url(../images/banner_1200.jpg) no-repeat center bottom;
+  position: relative;
+
+  a.logo {
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 66px;
+    background: url(../images/logo.svg) no-repeat 0 0;
+    background-size: contain;
+    top: 15px;
+    left: 20px;
+    z-index: $above-content;
+
+    span {
+      display: none;
+    } // span
+  } // logo
+} // header
+
+// Header - Hero image
+header {
+  div.hero {
+    position: absolute;
+    width: 42%;
+    top: 130px;
+    left: 55%;
+
+    h1 {
+      line-height: 1em;
+      margin: 0 0 30px 0;
+      color: $color-3;
+    } // h1
+  } // .hero
+} // header
+
+/* ========================
+Section ALL 
+========================= */
+section {
+  padding: 0 30px;
+}
+
+section::after, section::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ========================
+Main section 
+========================= */
+section.main {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 0;
+
+  aside {
+    width: 33%;
+    float: left;
+    text-align: center;
+
+    div.content {
+     margin: 15px;
+     background: no-repeat center top;
+     background-size: 75px 75px;
+     padding-top: 85px; 
+    } // .content
+  } // aside
+} // .main
+
+section.main aside h3 a {
+  color: $color-4;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+} // section.main aside h3 a
+
+// Icons
+section.main aside div.content.trending {
+  background-image: url(../images/icon_star.svg);
+}
+
+section.main aside div.content.find-it {
+  background-image: url(../images/icon_marker.svg);
+}
+
+section.main aside div.content.tools {
+  background-image: url(../images/icon_gear.svg);
+}
+
+
+/* ========================
+Atmosphere section 
+========================= */
+section.atmosphere {
+  background-color: $color-5;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: $color-3;
+
+  article {
+    padding: 0 20px 0 515px;
+    background: url(../images/photo_lounge.jpg) no-repeat 0 5px;
+    min-height: 220px;
+  } // article
+} // atomsphere
+
+
+/* ========================
+How to section 
+========================= */
+section.how-to {
+  background-color: $color-6;
+  position: relative;
+
+  aside {
+    width: 30%;
+    float: left;
+    margin-right: 10px;
+
+    .content {
+      padding: 30px 30px 20px 0;
+      
+      h4 {margin-bottom: 0;}
+      p {margin-bottom: 0.5em;}
+      a {
+        display: inline-block;
+        color: darken($color-5, 10%);
+        font-weight: 700;
+      }
+  
+      img {
+        display: block;
+        margin-bottom: 15px;
+        width: 70%;
+      }
+    } // .content
+  } // aside
+} // .how-to
+
+// blockquote
+section.how-to {
+  blockquote {
+    margin: 0;
+    width: 32%;
+    color: $color-7;
+    background-color: $color-3;
+    font-family: serif;
+    position: absolute;
+    bottom: 0;
+    right: 4%;
+
+
+    p {margin: 15px 15px 10px 25px;} // p
+
+  } // blockquote
+} // section
+
+section.how-to blockquote p.quote  {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+section.how-to blockquote p.credit  {
+  font-size: .9em;
+  margin-top: 0;
+  padding-left: 20px;
+  line-height: 1.3em;
+  color: lighten($color-7, 10%);
+  position: relative;
+}
+
+section.how-to blockquote::before {
+  content: "\201c";
+  color: darken($color-6, 16%);
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  font-size: 2em;
+  font-family: serif;
+}
+
+section.how-to blockquote p.quote::after {
+  content: "\201d";
+  color: darken($color-6, 16%);
+  font-family: serif;
+}
+
+section.how-to blockquote p.credit::after {
+  content: "\2014";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  color: darken($color-6, 24%);
+}
+
+/* ========================
+Site nav 
+========================= */
+nav {
+  background-color: rgba($color-4, 0.65);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 50px 0 0 0;
+  width: 100%;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      transition: background-color .5s;
+      &:hover {
+        background-color: $color-9;
+      } // hover
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px 20px;
+        color: $color-3;
+        width: 125px;
+        position: relative;
+        transition: background-color .5s;
+
+        &:visited {
+          color: $color-3;
+        }
+
+        &:hover {
+          background-color: $color-8;
+        }
+      } // a
+    } // li
+  } // ul
+} // nav
+
+nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// show sub menu
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  position: absolute;
+  top: 100%;
+  background-color: $color-9;
+  display: none; // hide sub menu
+
+  li {
+    position: relative;
+  } // li
+} // nav ul ul
+
+nav ul ul ul {
+  left: 100%;
+  top: 0px;
+}
+
+/* ========================
+Top Level
+========================= */
+nav > ul {padding-left: 200px;}
+nav > ul > li {float: left;}
+nav > ul > li > a {
+  width: auto;
+  padding: 10px 20px 15px 20px;
+}
+
+nav a[aria-haspopup="true"]::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  border: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid $color-3;
+}
+
+nav > ul > li > a[aria-haspopup="true"]::after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid $color-3;
+  left: 20px;
+  right: auto;
+  bottom: 6px;
+  top: auto;
+}
+
+/* ========================
+Footer
+========================= */
+
+footer {
+  font-size: 0.8em;
+  margin: 40px;
+  color: darken($color-7, 10%);
+
+  .content {
+    display: inline;
+  } // .content
+
+  a {
+    margin-left: 30px;
+    color: darken($color-7, 10%);
+
+    &:visited {
+      color: darken($color-7, 10%);
+    } // visited
+
+    &:hover {
+      color: darken($color-7, 90%);
+    } // hover
+  } // a
+} // footer
+
+/* ========================
+Media Queries 1000px
+========================= */
+
+@media screen and (max-width: 1000px) {
+  // header
+  header div.hero {left: 56%;}
+  header div.hero h1 {margin-bottom: 20px;}
+  
+  // atmosphere
+  section.atmosphere article {
+    padding-left: 400px;
+    background-size: 375px auto;
+  } 
+} // MQ 1000px
+
+/* ========================
+Media Queries 825px
+========================= */
+
+@media screen and (max-width: 825px) {
+  // header
+  header {
+    height: 300px;
+    background-image: url(../images/banner_825.jpg);
+
+    a {font-size: 1em;}
+  }
+
+  header div.hero {top: 120px; left: 48%;}
+
+  // atmosphere
+  section.atmosphere article {
+    padding-left: 325px;
+    background-size: 300px auto;
+  }
+
+  // how-to
+  section.how-to blockquote p.quote {
+    font-size: .95em;
+    line-height: 1.2em;
+  }
+
+  section.how-to blockquote p.credit {
+    font-size: .85em;
+  }
+} // MQ 825px
+
+/* ========================
+Media Queries 760px
+========================= */
+
+@media screen and (max-width: 760px) {
+  // header
+  header a.logo {
+    width: 145px;
+    height: 60px;
+  }
+
+  header div.hero {
+    top: 140px;
+    left: 48%;
+    min-width: 40%;
+  }
+
+  header {a {font-size: 1em;}}
+  
+  // main section
+  section.main {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  section.main aside div.content {
+    background-size: 55px 55px;
+    padding-top: 60px;
+  }
+
+  // how-to
+  section.how-to aside div.content img {width: 100%;}
+
+  nav { padding-top: 80px; }
+  nav > ul { padding-left: 10px; }
+
+} // MQ 760px
+
+/* ========================
+Media Queries 625px
+========================= */
+
+@media screen and (max-width: 625px) {
+  // header
+  header {
+    height: 160px;
+    background-image: url(../images/banner_625.jpg) left top;
+
+    a.logo {
+      width: 100%;
+      height: 66px;
+      left: 0px;
+      top: 0px;
+      background-color: rgba($color-4, .65);
+      background-size: 112px 46px;
+      background-position: 20px center;
+    } // a.logo
+  } // header
+
+  header div.hero {
+    min-width: 40%;
+    top: 85px;
+    left: 130px;
+
+    h1 {
+      margin-bottom: 5px;
+      font-size: 1.15em;
+    }
+
+    a {font-size: .95em;}
+
+  } // header div.hero
+
+  // main
+  section.main {margin: 1em 0;}
+
+  section.main aside {
+    width: 100%;
+    float: none;
+    text-align: left;
+
+    div.content {
+      margin: 8px 20px 8px 0;
+      padding: 5px 0 10px 85px;
+      background-size: 50px 50px;
+      background-position: 20px 5px;
+    } // div.content
+  } // section.main aside
+
+  // atmosphere
+  section.atmosphere article {
+    padding: 160px 20px 0px 0px;
+    background-size: 300px auto;
+    min-height: initial;
+  }
+
+  // how-to
+  section.how-to aside {
+    width: 100%;
+    float: none;
+    margin: 0;
+    position: relative;
+  } // section.how-to aside
+
+  section.how-to aside div.content {
+    padding-right: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    } // img
+  } // section.how-to aside div.content
+
+  section.how-to blockquote {
+    margin: 0px 20px 0px 12px;
+    width: 100%;
+    padding: 1px 0px 20px 0px;
+    position: relative;
+  }
+
+  section.how-to blockquote::before {
+    top: 12px;
+    font-size: 2em;
+  }
+
+  section.how-to blockquote p.credit { margin-bottom: 0;}
+
+  // nav
+  nav {
+    position: static;
+    width: auto;
+    padding: 20px 15px;
+    background-color: $color-10;
+  } // nav
+
+  // reset nav
+  nav ul, nav ul ul, nav ul ul ul {
+    display: block;
+    position: static;
+  }
+
+  // top-level
+  nav > ul {padding: 0;}
+  nav > ul > li {float: none; margin-top: 25px;}
+
+  nav ul li:hover {background: none;}
+  
+  nav ul li a {
+    width: auto;
+    display: block;
+    margin: 8px 10px;
+    padding: 8px 15px;
+    border: 1px solid rgba($color-3, .25);
+    
+    &:hover {
+      background-color: rgba($color-3, .2);
+    } // hover
+  } // nav ul li a
+
+  // remove nested nav styles
+  nav ul ul {background: none;}
+
+  nav ul ul li a {margin-left: 30px;}
+  nav ul ul ul li a {margin-left: 60px;}
+  nav a[aria-haspopup="true"]::after {display: none;}
+
+  // footer
+  footer div.content {
+    display: block;
+    margin-top: 15px;
+
+    a {margin: 0px 20px 0px 0px;}
+  }
+} // MQ 625
+
+/* ========================
+Media Queries 425px
+========================= */
+
+@media screen and (max-width: 425px) {
+  header {
+    height: 110px;
+    background-image: url(../images/banner_425.jpg);
+
+    a.logo {
+      height: 36px;
+      background: rgba($color-4, .65) url(../images/logo_small.svg) no-repeat center center;
+      background-size: 126px 17px;
+    } // a.logo
+  } // header
+
+  header div.hero {
+    width: 100%;
+    left: 0px;
+    top: 46px;
+    text-align: center;
+    
+    h1 {margin-bottom: .45em;}
+    a.btn span {display: none;}
+  } // header div.hero
+
+  // footer
+  footer::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  footer div.content a {
+    display: inline-block;
+    margin: 0px 0px 10px 0px;
+    float: left;
+    clear: both;
+  }
+
+} // MQ 425
+
+
+
+
+
+
+

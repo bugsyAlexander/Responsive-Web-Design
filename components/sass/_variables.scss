@@ -1,0 +1,28 @@
+// color palette
+$color-1  : #007EFF;  // Anchor colors
+$color-2  : #CF0004;  // Header background
+$color-3  : #FFFFFF;  // White anchor btn
+$color-4  : #000000;  // Black
+$color-5  : #CC6633;  // Orange
+$color-6  : #EEE9D9;  // Cream
+$color-7  : #444444;  // Gray
+$color-8  : #6D0911;  // Red
+$color-9  : #2B0306;  // Red v2
+$color-10 : #4B0A0C;  // Dark red nav-small
+
+
+$font-primary: 'Quattrocento Sans', sans-serif;
+$font-secondary: 'Quattrocento', serif;
+
+// z-index
+$below-content: 1;
+$content: 2;
+$above-content: 3;
+
+// Breakpoints
+$xS   : 20rem;       // 320px - iphone 3
+$S    : 30rem;       // 480px
+$i5   : 40rem;       // 640px - iphone 5
+$M    : 48rem;       // 768px - ipad mini
+$L    : 73.125rem;   // 1170px
+$maxL :  $L - 0.0625rem;
